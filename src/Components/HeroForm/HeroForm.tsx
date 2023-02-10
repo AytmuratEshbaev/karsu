@@ -79,9 +79,8 @@ function HeroForm() {
 
                     <div className={`form__step-two ${currentStep === 2 ? 'active' : null}`}>
                         <div className="awesome-input">
-                            <input type="text" name="specialty" id="speacialty" value={data.specialty} onChange={changeValue}
-                                className={`${data.specialty !== '' ? 'filled' : null}`} required />
-                            <label htmlFor="speacialty">Желаемая специальность</label>
+                            <input type="text" name="specialty" id="specialty" value={data.specialty} onChange={changeValue} className={`${data.specialty !== '' ? 'filled' : null}`} required />
+                            <label htmlFor="specialty">Желаемая специальность</label>
                         </div>
                         <div className="second-step__options">
                             {secondStepOptions.map((option: string) =>

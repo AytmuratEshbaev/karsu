@@ -8,7 +8,6 @@ function HeroBanner() {
                 <div className='share__btn'>
                     <img src="./images/share.svg" alt="share" />
                 </div>
-                
             </h1>
             <p className="hero-text">
                 Мы — единая приёмная комиссия вузов и колледжей по программам дистанционного обучения

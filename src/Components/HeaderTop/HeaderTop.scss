@@ -130,6 +130,7 @@
         opacity: 0;
         background-color: $color00;
         opacity: 10;
+        z-index: 2;
 
         &.open {
             transform: scaleY(1);

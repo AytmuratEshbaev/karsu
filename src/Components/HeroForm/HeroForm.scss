@@ -134,10 +134,6 @@
                 font-family: 'Inter';
                 padding-top: 32px;
 
-                .awesome-input {
-                    flex: 1;
-                }
-
                 .second-step__options {
                     flex: 1;
                     padding: 18px 0 52px;
@@ -165,19 +161,31 @@
             .form__step-three {
                 display: flex;
                 flex-direction: column;
-                padding-top: 32px;
+                padding-top: 16px;
                 height: 100%;
-                .input__group{
-                    margin-bottom: 16px;
+
+                .input__group {
+                    flex: 1;
                 }
+
                 .awesome-input:not(:last-of-type) {
-                    margin-bottom: 32px;
+                    margin-bottom: 20px;
                 }
-                p{
+
+                .awesome-input {
+                    input {
+                        @include mixins.text01(500);
+                    }
+                }
+
+                button {
+                    margin: 8px 0;
+                }
+
+                p {
                     @include mixins.descriptor01();
-                }
-                button{
-                    margin: 16px 0;
+                    color: $color03;
+                    border-bottom: 1px solid #929292;
                 }
             }
 
@@ -185,35 +193,33 @@
                 position: relative;
 
                 label {
-                    @include mixins.text03();
                     position: absolute;
-                    top: 0;
+                    bottom: 15px;
                     left: 15px;
                     transform-origin: top left;
-                    @include mixins.text03();
+                    @include mixins.caption03(600);
                     font-family: 'Inter';
                     transition: all .3s ease;
+                    color: $color03;
                 }
 
                 input {
                     outline: none;
                     background-color: transparent;
                     border: none;
-                    border-bottom: 2px solid $color02;
+                    border-bottom: 1px solid #333;
                     width: 100%;
                     padding: 10px 15px;
-                    caret-color: $color09;
+                    caret-color: $color00;
                     border-radius: 4px;
                     color: $color00;
+                    @include mixins.caption03(600);
+
                     &.filled+label,
                     &:focus+label {
-                        font-size: 12px;
-                        top: -22px;
+                        @include mixins.descriptor01();
+                        bottom: 40px;
                         left: 5px;
-                    }
-
-                    &:focus {
-                        background-color: $color08;
                     }
                 }
             }
