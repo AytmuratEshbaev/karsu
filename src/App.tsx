@@ -1,27 +1,19 @@
-import React from 'react';
 import './App.scss';
-import DeparturesSection from './Layouts/DeparturesSection';
-import Footer from './Layouts/Footer';
-import Graduate from './Layouts/Graduate';
-import Header from './Layouts/Header';
-import HeroSection from './Layouts/HeroSection';
-import InformationSection from './Layouts/InformationSection';
-import MapLocation from './Layouts/MapLocation';
-import Partners from './Layouts/Partners';
-import SubmitDocuments from './Layouts/SubmitDocuments';
+import { Routes, Route } from 'react-router-dom'
+import Home from './Pages/Home';
+import QuotesPage from './Pages/QuotesPage';
+import AdmissionDocuments from './Pages/AdmissionDocuments';
+import NotFound from './Pages/NotFound';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <HeroSection />
-      <Partners />
-      <DeparturesSection />
-      <Graduate />
-      <InformationSection />
-      <SubmitDocuments />
-      <MapLocation />
-      <Footer />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/quotes' element={<QuotesPage />} />
+        <Route path='/admission-documents' element={<AdmissionDocuments />} />
+        <Route path='/*' element={<NotFound />} />
+      </Routes>
     </div>
   );
 }

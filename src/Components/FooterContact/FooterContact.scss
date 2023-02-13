@@ -68,6 +68,7 @@
             padding: 17px 19px;
             @include mixins.caption03();
             color: #A8A8A8;
+            resize: none;
         }
     }
 
